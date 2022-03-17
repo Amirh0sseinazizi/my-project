@@ -1,7 +1,5 @@
 
-
-
-nav#header ul li a::after{
+nav#header ul li a::after {
   content: " ";
   width: 0;
   height: 2px;
@@ -12,7 +10,20 @@ nav#header ul li a::after{
   transition: all 0.3s ease-in-out;
 }
 
-nav#header ul li a:hover::after{
+nav#header ul li a:hover::after {
   width: 100%;
   background-color: #131f68;
+}
+
+@media (max-width: 1024px) {
+  nav#header {
+    height: 0vh;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+  }
+
+  nav#header.active {
+    height: 90vh;
+    overflow: hidden;
+  }
 }
